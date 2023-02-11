@@ -1,0 +1,64 @@
+@use '../util' as u;
+
+.homeHeader {
+    padding-inline: u.rem(32);
+    padding-top: calc(48vw);
+    padding-bottom: u.rem(152);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url("../../images/mobile/plate-mobile.png")  top/70% no-repeat #000;
+    
+    @include u.breakpoint(medium) {
+        padding-inline: u.rem(100);
+        padding-bottom: u.rem(216);
+        background: url("../../images/tablet/plate-tablet.png")  top/80% no-repeat #000;
+    }
+
+    @include u.breakpoint(large) {
+        padding-left: u.rem(165);
+        padding-right: 48%;
+        padding-top: u.rem(62);
+        padding-bottom: u.rem(198);
+        background: url("../../images/desktop/plate-desktop.png")  right bottom/45% no-repeat #000;
+        text-align: left;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    &__h3 {
+        font-size: u.rem(36);
+
+        @include u.breakpoint(large) {
+            margin-bottom: u.rem(140);
+            font-size: u.rem(48);
+        }
+    }
+
+    &__h4 {
+        font-weight: 400;
+
+        @include u.breakpoint(large) {
+            margin: 0;
+            font-size: u.rem(54);
+        }
+    }
+
+    &__p {
+        margin-bottom: u.rem(48);
+
+        @include u.breakpoint(large) {
+            margin: 0;
+        }
+    }
+
+    button {
+        @include u.breakpoint(large) {
+            margin-top: u.rem(32);
+
+        }
+    }
+}

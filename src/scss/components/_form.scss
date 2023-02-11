@@ -1,0 +1,60 @@
+@use '../util' as u;
+
+.form {
+    width: calc(100% - u.rem(48));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #e6e6e6;
+    margin-block: u.rem(24);
+    align-items: center;
+    padding-block: u.rem(24);
+
+    &__fieldset {
+        width: 100%;
+        border-color: transparent;
+        padding: 0;
+    }
+
+    &__p {
+        margin-bottom: u.rem(8);
+    }
+
+    &__input, &__select {
+        width: calc(100% - u.rem(48));
+        height: u.rem(44);
+        padding-inline: u.rem(16);
+        border: 1px solid transparent;
+        border-bottom-color: #e6e6e6;
+    }
+
+    &__input {
+        height: u.rem(48);
+    }
+    
+    &__legend {
+        color: #929292;
+        font-size: u.rem(14);
+        margin-bottom: u.rem(8);
+    }
+
+    .checkbox {
+        display: flex;
+        justify-content: center;
+        gap: u.rem(8);
+        align-items: center;
+        line-height: 1;
+    }
+
+    svg {
+        margin: 0;
+        color: hsl(0, 94%, 56%);
+    }
+
+    svg:hover, svg:focus {
+        transform: scale(1.2);
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+        cursor: pointer;
+    }
+}

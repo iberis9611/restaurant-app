@@ -1,0 +1,43 @@
+@use '../util' as u;
+
+.header {
+    background-color: #fff;
+    color: #000;
+    padding: u.rem(12) u.rem(24);
+    border-bottom: u.rem(1) solid #e6e6e6;
+    position: sticky;
+    top:0;
+    z-index: 1;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            font-size: u.rem(32);
+            color: #000;
+        }
+
+        &__button {
+            width: auto;
+            font-size: u.rem(12);
+            letter-spacing: u.rem(1);
+            font-weight: 700;
+            border-color: transparent;
+            background-color: transparent;
+            color: #a2a2a2;
+            margin-top: 0;
+            padding: 0;
+
+            a {
+                font-size: u.rem(12);
+                color: #000;
+            }
+        }
+
+        &__button:hover, &__button:focus {
+            transform: scale(1.2);
+            border-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use "../util/" as u;
+
+button {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    width: calc(100% - u.rem(48));
+    padding: u.rem(10);
+    margin-top: u.rem(16);
+    border: 1px solid #fff;
+}
+
+button:hover, button:focus {
+    background-color: #fff;
+    color: #000;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    border-color: #000;
+    cursor: pointer;
+}
+
+.button {
+    padding-block: u.rem(24);
+    letter-spacing: u.rem(1);
+    width: u.rem(224);
+}

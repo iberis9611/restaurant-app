@@ -1,0 +1,11 @@
+@use 'functions' as f;
+
+.offscreen {
+    transform: scale(0);
+    position: absolute;
+}
+
+.selectedCouse {
+    transform: scale(1.05);
+    box-shadow: 0 f.rem(10) f.rem(30) f.rem(-10) hsla(0, 0%, 0%);
+}

@@ -1,0 +1,21 @@
+@use '../util/' as u;
+
+.picker {
+    display: flex;
+    padding-inline: u.rem(24);
+    justify-content: space-between;
+
+    &__div {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__select {
+        width: 30%;
+        border-color: transparent;
+        border-bottom: u.rem(1) solid #e6e6e6;
+        text-align: center;
+        appearance: none;
+    }
+}

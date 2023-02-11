@@ -1,0 +1,39 @@
+@use '../util' as u;
+
+.menu {
+    display: flex;
+    padding: u.rem(40) u.rem(24) u.rem(24);
+
+    &__ul {
+        display: flex;
+        flex-grow: 1;
+        flex-flow: column wrap;
+        flex-direction: column;
+        row-gap: u.rem(24);
+        justify-content: center;
+        align-content: center;
+
+        @include u.breakpoint(medium) {
+            flex-direction: row;
+            justify-content: space-between;
+            row-gap: u.rem(28);
+        }
+
+        @include u.breakpoint(large) {
+            row-gap: u.rem(26);
+        }
+    }
+
+    &__li {
+        width: 100%;
+        max-width: u.rem(590);
+
+        @include u.breakpoint(medium) {
+            width: 48%;
+        }
+
+        @include u.breakpoint(large) {
+            width: 23%;
+        }
+    }
+}

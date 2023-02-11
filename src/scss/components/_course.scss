@@ -1,0 +1,49 @@
+@use '../util' as u;
+
+.course {
+    position: relative;
+    margin: 0;
+    background-color: hsl(0, 0%, 100%);
+    
+
+    &__figcaption {
+        color: hsl(0, 0%, 100%);
+        width: 100%;
+        position: absolute;
+        bottom: u.rem(36);
+        padding-inline: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__p {
+        margin: 0;
+        font-size: u.rem(13);
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+
+    .price {
+        font-size: u.rem(24);
+        font-weight: bold;
+    }
+
+    &__image {
+        width: 100%;
+        margin: 0;
+    }
+
+    &__image:hover, &__image:focus {
+        opacity: 0.5;
+        cursor: pointer;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+    }
+
+    &__image:active {
+        box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.45);
+        transform: scale(1.05);
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+    }
+}

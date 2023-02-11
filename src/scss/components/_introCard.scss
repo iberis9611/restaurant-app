@@ -1,0 +1,89 @@
+@use '../util' as u;
+
+.intro {
+
+    &__figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        @include u.breakpoint(large) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: u.rem(124);
+        }
+    }
+
+
+    &__picture {
+        width: u.rem(327);
+        height: u.rem(400);
+
+        @include u.breakpoint(medium) {
+            width: u.rem(573);
+            height: u.rem(358);
+        }
+
+        @include u.breakpoint(large) {
+            width: u.rem(542);
+            height: u.rem(721);
+            position: relative;
+        }
+
+
+        &__first {
+            height: u.rem(328);
+        }
+
+        &__second {
+            @include u.breakpoint(large) {
+                order: 1;
+            }
+        }
+    }
+
+    &__image {
+        &-top {
+            position: absolute;
+            top: u.rem(-72);
+
+            @include u.breakpoint(large) {
+                top: -82px;
+            }
+        }
+
+        &-bottom {
+            @include u.breakpoint(large) {
+                position: absolute;
+                bottom: -82px;
+            }
+        }
+    }
+
+    &__figcation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-block: u.rem(52) u.rem(84);
+    }
+
+    &__article {
+        @include u.breakpoint(medium) {
+            padding-inline: u.rem(64);
+        }
+
+        @include u.breakpoint(large) {
+            padding: 0;
+            text-align: left;
+            align-items: start;
+        }
+    }
+
+    &__h2 {
+        @include u.breakpoint(large) {
+            margin: 0;
+        }
+    }
+}
